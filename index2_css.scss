@@ -1,0 +1,14 @@
+$card-width:  50vw;
+$card-height: 50vh;
+
+.card{
+    display: block;
+    align-items: center;
+    width: $card-width;
+    height: $card-height;
+    background-image: url(./my_photo.jpg) no-repeat;
+}
+
+.card-hover{
+    background-color: blue;
+}

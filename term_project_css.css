@@ -1,0 +1,13 @@
+body{
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+#term_project_content{
+    width:100vw;
+}
+
+#term_project_main img, #term_project_result img, #term_project_specific img, #term_project_test img, #term_project_compare img{
+    width:100vw;
+}

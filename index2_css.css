@@ -1,0 +1,236 @@
+body{
+  margin: 0;
+  padding: 0;
+  border:0;
+}
+
+.card_container{
+  background: #323c41;
+  width:100vw;
+  height:100vh;
+  align-content: center;
+  position:relative;
+}
+
+.card_background{
+  background-image: url("./my_photo.jpg");
+  border-radius: 10%;
+  background-size: cover;
+  background-position: center;
+  width: 50vh;
+  height:50vh;
+  position:relative;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+}
+
+.card_description{
+  opacity: 0%;
+  color: #D0BB57;
+}
+
+.card_background:hover{
+  opacity: 20%;
+  transition: 0.5s;
+}
+.card_background:hover .card_description{
+  opacity: 100%;
+  transition: 0.5s;
+  font-size: 2em;
+}
+.card_background:hover .card_title{
+  opacity: 0%;
+  transition: 0.5s;
+}
+
+.card_background:not(:hover){
+  opacity: 100%;
+  transition: 0.5s;
+}
+.card_background:not(:hover) .card_description{
+  opacity: 0%;
+  transition: 0.5s;
+  font-size: 2em;
+}
+.card_background:not(:hover) .card_title{
+  opacity: 100%;
+  transition: 0.5s;
+}
+
+.card{
+ text-align: center;
+ position:relative;
+}
+
+.card_title{
+  font-size: 2em;
+  text-align: right;
+  color:white;
+}
+
+
+
+.index_container{
+  background: #323c41;
+  color:white;
+  display: grid;
+  grid-template-columns: repeat(3, 25vw);
+  grid-template-rows: repeat(2, 25vh);
+  align-content: center;
+  width:100vw;
+}
+.index_container a:link{
+  text-decoration: none;
+  color:white;
+}
+
+/* .about_me, .project, .toy_project, .skills, .music, .others{
+  color:white;
+} */
+
+.about_me{
+  background: #323c41;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  width:100vw;
+}
+
+.slide{
+  width:50vw;
+  height:50vw;
+  margin:50px auto;
+}
+
+.slides{
+  list-style: none;
+  width: 50vw;
+  padding:0px;
+  position:relative;
+}
+
+
+.my_photo1 img, .my_photo2 img, .my_photo3 img{
+  width:50vw;
+  height:50vw;
+  object-fit: scale-down;
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+.about_me_description{
+  font-size: 0.75em;
+}
+
+/* project / porfolio */
+
+.project{
+  background: #323c41;
+  height: 100vw;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  width:100vw;
+  position:relative;
+}
+.portfolio_list{
+  text-align: center;
+  font-size: 0.5em;
+  margin-top: 30px;
+}
+#term_project_title{
+  color: #D0BB57;
+}
+#capstone_design_title{
+  color:white;
+}
+.portfolio_content_container{
+  top:30%;
+  position:absolute;
+  transform:translateY(-50%);
+}
+.portfolio_image{
+  width:50vw;
+  height:auto;
+  position:absolute;
+  margin:10px;
+  left:0;
+}
+.portfolio_image img{
+  width:50vw;
+  height:auto;
+}
+.portfolio_description{
+  width:50vw;
+  height:auto;
+  position:absolute;
+  right:0;
+}
+.portfolio_description span{
+  font-size: 0.5em;
+  margin:20px;
+  display: block;
+}
+.portfolio_specific_btn a{
+  color:white;
+  text-decoration: unset;
+}
+
+/*  project.term_project  */
+.term_project_content{
+  width: 100vw;
+  position:relative;
+  margin-top:5vw;
+}
+.portfolio_specific_btn{
+  font-size: 0.5em;
+  width: 7em;
+  border-radius: 20%;
+  border: 1px solid #D0BB57;
+  left:50%;
+  bottom:0%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+ /* project.capstone_design */
+
+
+ /* term_project modal */
+#term_project_modal{
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  top:0;
+  left:0;
+  z-index: 10000;
+  position:fixed;
+  display:flex;
+  flex-direction: column;
+  overflow-y: initial !important;
+}
+
+#term_project_modal img{
+  width: 90vw;
+}
+
+ /* capstone_design modal */
+
+.toy_project{
+  background-color: green;
+}
+
+.skills{
+  background-color: blue;
+}
+
+.music{
+  background-color: purple;
+}
+
+.others{
+  background-color: white;
+}
