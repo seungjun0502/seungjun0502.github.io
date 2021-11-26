@@ -36,13 +36,12 @@ playConsole = setInterval(function(){
     next_btn()
 },3000);
 
-
+//----------portfolio
 function term_project_click(){
     document.getElementById("term_project_content").style.visibility="visible";
     document.getElementById("capstone_design_content").style.visibility="hidden";
     document.getElementById("term_project_title").style.color="#D0BB57";
     document.getElementById("capstone_design_title").style.color="white";
-    console.log("1111111111");
 }
 
 function capstone_design_click(){
@@ -50,7 +49,6 @@ function capstone_design_click(){
     document.getElementById("capstone_design_content").style.visibility="visible";
     document.getElementById("term_project_title").style.color="white";
     document.getElementById("capstone_design_title").style.color="#D0BB57";
-    console.log("1111111111");
 }
 
 document.getElementById("capstone_design_content").style.visibility="hidden";
@@ -61,3 +59,35 @@ document.getElementById("term_project_title").addEventListener('click', function
 document.getElementById("capstone_design_title").addEventListener('click', function(){
     capstone_design_click()
 });
+
+//----------------------------------
+
+//-----------toy project
+
+function instagram_clone_click(){
+    document.getElementById("instagram_clone_content").style.visibility="visible";
+    document.getElementById("2F_fan_content").style.visibility="hidden";
+    document.getElementById("instagram_clone_title").style.color="#D0BB57";
+    document.getElementById("2F_fan_title").style.color="white";
+}
+
+function f2F_fan_click(){
+    document.getElementById("instagram_clone_content").style.visibility="hidden";
+    document.getElementById("2F_fan_content").style.visibility="visible";
+    document.getElementById("instagram_clone_title").style.color="white";
+    document.getElementById("2F_fan_title").style.color="#D0BB57";
+}
+
+document.getElementById("2F_fan_content").style.visibility="hidden";
+
+document.getElementById("instagram_clone_title").addEventListener('click', function(){
+    instagram_clone_click()
+});
+document.getElementById("2F_fan_title").addEventListener('click', function(){
+    f2F_fan_click()
+});
+
+
+
+
+//------------------------------------

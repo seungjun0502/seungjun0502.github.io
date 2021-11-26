@@ -1,7 +1,15 @@
+html{
+  margin: 0;
+  padding: 0;
+  border:0;
+}
+
 body{
   margin: 0;
   padding: 0;
   border:0;
+  background: #323c41;
+  overflow-x: hidden;
 }
 
 .card_container{
@@ -19,6 +27,7 @@ body{
   background-position: center;
   width: 50vh;
   height:50vh;
+  margin:0;
   position:relative;
   left:50%;
   top:50%;
@@ -74,11 +83,13 @@ body{
 .index_container{
   background: #323c41;
   color:white;
-  display: grid;
-  grid-template-columns: repeat(3, 25vw);
-  grid-template-rows: repeat(2, 25vh);
+  display: flex;
+  position:sticky;
+  top:0px;
   align-content: center;
   width:100vw;
+  z-index: 9999999;
+  justify-content: space-evenly;
 }
 .index_container a:link{
   text-decoration: none;
@@ -91,7 +102,8 @@ body{
 
 .about_me{
   background: #323c41;
-  height: 100vh;
+  padding-top: 5em;
+  padding-bottom: 5em;
   color: white;
   text-align: center;
   font-size: 2em;
@@ -198,29 +210,17 @@ body{
  /* project.capstone_design */
 
 
- /* term_project modal */
-#term_project_modal{
-  background-color: blue;
-  width: 100%;
-  height: 100%;
-  align-content: center;
-  top:0;
-  left:0;
-  z-index: 10000;
-  position:fixed;
-  display:flex;
-  flex-direction: column;
-  overflow-y: initial !important;
-}
-
-#term_project_modal img{
-  width: 90vw;
-}
-
- /* capstone_design modal */
-
 .toy_project{
   background-color: green;
+  height: 100vw;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  width:100vw;
+  position:relative;
+}
+#instagram_clone_title{
+  color:#D0BB57;
 }
 
 .skills{
@@ -229,6 +229,15 @@ body{
 
 .music{
   background-color: purple;
+}
+.music_container{
+  color:white;
+  display: grid;
+  grid-template-columns: repeat(3, 25vw);
+  grid-template-rows: repeat(2, 25vh);
+  width:100vw;
+  left:50%;
+  justify-content: space-evenly;
 }
 
 .others{
