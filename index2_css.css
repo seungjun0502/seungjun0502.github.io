@@ -91,9 +91,10 @@ body{
   z-index: 9999999;
   justify-content: space-evenly;
 }
-.index_container a:link{
+.index_container a{
   text-decoration: none;
   color:white;
+
 }
 
 /* .about_me, .project, .toy_project, .skills, .music, .others{
@@ -192,7 +193,12 @@ body{
 }
 
 /*  project.term_project  */
-.term_project_content{
+.term_project_content, .capstone_design_content, .instagram_clone_content{
+  width: 100vw;
+  position:relative;
+  margin-top:5vw;
+}
+.instagram_clone_content{
   width: 100vw;
   position:relative;
   margin-top:5vw;
@@ -209,7 +215,6 @@ body{
 }
  /* project.capstone_design */
 
-
 .toy_project{
   background-color: green;
   height: 100vw;
@@ -219,6 +224,7 @@ body{
   width:100vw;
   position:relative;
 }
+
 #instagram_clone_title{
   color:#D0BB57;
 }
@@ -228,7 +234,7 @@ body{
 }
 
 .music{
-  background-color: purple;
+  background-color:#323c41;
 }
 .music_container{
   color:white;
@@ -238,6 +244,15 @@ body{
   width:100vw;
   left:50%;
   justify-content: space-evenly;
+}
+.music_container a{
+  text-decoration: none;
+  color:white;
+  text-align: center;
+}
+.music_container a img{
+  width: 25vw;
+  height: 25vw;
 }
 
 .others{
