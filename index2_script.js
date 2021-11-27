@@ -38,20 +38,24 @@ playConsole = setInterval(function(){
 
 //----------portfolio
 function term_project_click(){
-    document.getElementById("term_project_content").style.visibility="visible";
-    document.getElementById("capstone_design_content").style.visibility="hidden";
+    document.getElementById("term_project_content").style.opacity="100%";
+    document.getElementById("capstone_design_content").style.opacity="0%";
     document.getElementById("term_project_title").style.color="#D0BB57";
     document.getElementById("capstone_design_title").style.color="white";
+    document.getElementById("term_project_title").style.fontSize="2em";
+    document.getElementById("capstone_design_title").style.fontSize="1em";
 }
 
 function capstone_design_click(){
-    document.getElementById("term_project_content").style.visibility="hidden";
-    document.getElementById("capstone_design_content").style.visibility="visible";
+    document.getElementById("term_project_content").style.opacity="0%";
+    document.getElementById("capstone_design_content").style.opacity="100%";
     document.getElementById("term_project_title").style.color="white";
     document.getElementById("capstone_design_title").style.color="#D0BB57";
+    document.getElementById("term_project_title").style.fontSize="1em";
+    document.getElementById("capstone_design_title").style.fontSize="2em";
 }
 
-document.getElementById("capstone_design_content").style.visibility="hidden";
+document.getElementById("capstone_design_content").style.opacity="0%";
 
 document.getElementById("term_project_title").addEventListener('click', function(){
     term_project_click()
@@ -65,20 +69,20 @@ document.getElementById("capstone_design_title").addEventListener('click', funct
 //-----------toy project
 
 function instagram_clone_click(){
-    document.getElementById("instagram_clone_content").style.visibility="visible";
-    document.getElementById("2F_fan_content").style.visibility="hidden";
+    document.getElementById("instagram_clone_content").style.opacity="100%";
+    document.getElementById("2F_fan_content").style.opacity="0%";
     document.getElementById("instagram_clone_title").style.color="#D0BB57";
     document.getElementById("2F_fan_title").style.color="white";
 }
 
 function f2F_fan_click(){
-    document.getElementById("instagram_clone_content").style.visibility="hidden";
-    document.getElementById("2F_fan_content").style.visibility="visible";
+    document.getElementById("instagram_clone_content").style.opacity="0%";
+    document.getElementById("2F_fan_content").style.opacity="100%";
     document.getElementById("instagram_clone_title").style.color="white";
     document.getElementById("2F_fan_title").style.color="#D0BB57";
 }
 
-document.getElementById("2F_fan_content").style.visibility="hidden";
+document.getElementById("2F_fan_content").style.opacity="0%";
 
 document.getElementById("instagram_clone_title").addEventListener('click', function(){
     instagram_clone_click()

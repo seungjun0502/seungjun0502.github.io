@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&family=Ubuntu:wght@700&display=swap');
 html{
   margin: 0;
   padding: 0;
@@ -109,6 +111,7 @@ body{
   text-align: center;
   font-size: 2em;
   width:100vw;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .slide{
@@ -125,13 +128,14 @@ body{
 }
 
 
-.my_photo1 img, .my_photo2 img, .my_photo3 img{
+#my_photo1 img, #my_photo2 img, #my_photo3 img{
   width:50vw;
   height:50vw;
   object-fit: scale-down;
   position:absolute;
   top:0px;
   left:0px;
+  transition:0.5s;
 }
 
 .about_me_description{
@@ -156,9 +160,14 @@ body{
 }
 #term_project_title{
   color: #D0BB57;
+  font-size: 2em;
+  transition:0.5s;
+  font-family: 'IBM Plex Sans KR', sans-serif;
 }
 #capstone_design_title{
   color:white;
+  transition:0.5s;
+  font-family: 'IBM Plex Sans KR', sans-serif;
 }
 .portfolio_content_container{
   top:30%;
@@ -197,6 +206,7 @@ body{
   width: 100vw;
   position:relative;
   margin-top:5vw;
+  transition:0.5s;
 }
 .instagram_clone_content{
   width: 100vw;
