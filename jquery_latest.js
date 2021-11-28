@@ -1,3 +1,26 @@
+window.addEventListener("wheel", function(e){
+    e.preventDefault();
+}, {passive : false});
+
+var mHtml = $("html");
+var page = 1;
+
+
+mHtml.animate({scrollTop : 0},10);
+
+$(window).on("wheel", function(e) {
+    if(mHtml.is(":animated")) return;
+    if(e.originalEvent.deltaY > 0) {
+        if(page == 5) return;
+        page++;
+    } else if(e.originalEvent.deltaY < 0) {
+        if(page == 1) return;
+        page--;
+    }
+    var posTop =(page-1) * $(window).height();
+    mHtml.animate({scrollTop : posTop});
+})
+
 var currentIdx = 0;
 var my_photo_arr = [];
 my_photo_arr[0] = "my_photo1";
@@ -70,26 +93,3 @@ document.getElementById("term_project_title").addEventListener('click', function
 document.getElementById("capstone_design_title").addEventListener('click', function(){
     capstone_design_click()
 });
-
-window.addEventListener("wheel", function(e){
-    e.preventDefault();
-},{passive : false});
-
-var mHtml = ("html");
-var page = 1;
-
-
-mHtml.animate({scrollTop : 0},10);
-
-$(window).on("wheel", function(e) {
-    if(mHtml.is(":animated")) return;
-    if(e.originalEvent.deltaY > 0) {
-        if(page == 4) return;
-        page++;
-    } else if(e.originalEvent.deltaY < 0) {
-        if(page == 1) return;
-        page--;
-    }
-    var posTop =(page-1) * $(window).height();
-    mHtml.animate({scrollTop : posTop});
-})
