@@ -11,7 +11,7 @@ mHtml.animate({scrollTop : 0},10);
 $(window).on("wheel", function(e) {
     if(mHtml.is(":animated")) return;
     if(e.originalEvent.deltaY > 0) {
-        if(page == 4) return;
+        if(page == 5) return;
         page++;
     } else if(e.originalEvent.deltaY < 0) {
         if(page == 1) return;
@@ -63,22 +63,29 @@ playConsole = setInterval(function(){
 function term_project_click(){
     document.getElementById("term_project_content").style.opacity="100%";
     document.getElementById("capstone_design_content").style.opacity="0%";
+    document.getElementById("term_project_content").style.visibility="visible";
+    document.getElementById("capstone_design_content").style.visibility="hidden";
+    document.getElementById("term_project_content").style.zIndex="9999";
+    document.getElementById("capstone_design_content").style.zIndex="0";
     document.getElementById("term_project_title").style.color="#D0BB57";
     document.getElementById("capstone_design_title").style.color="white";
-    document.getElementById("term_project_title").style.fontSize="2em";
-    document.getElementById("capstone_design_title").style.fontSize="1em";
+    
 }
 
 function capstone_design_click(){
     document.getElementById("term_project_content").style.opacity="0%";
     document.getElementById("capstone_design_content").style.opacity="100%";
+    document.getElementById("capstone_design_content").style.visibility="visible";
+    document.getElementById("term_project_content").style.visibility="hidden";
+    document.getElementById("term_project_content").style.zIndex="0";
+    document.getElementById("capstone_design_content").style.zIndex="9999";
     document.getElementById("term_project_title").style.color="white";
     document.getElementById("capstone_design_title").style.color="#D0BB57";
-    document.getElementById("term_project_title").style.fontSize="1em";
-    document.getElementById("capstone_design_title").style.fontSize="2em";
+    
 }
 
 document.getElementById("capstone_design_content").style.opacity="0%";
+document.getElementById("capstone_design_content").style.visibility="hidden";
 
 document.getElementById("term_project_title").addEventListener('click', function(){
     term_project_click()
