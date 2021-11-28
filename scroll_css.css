@@ -1,0 +1,103 @@
+html {
+    overflow: hidden;
+}
+
+html, body {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    
+}
+
+.section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#section1 {
+    background-color: aliceblue;
+}
+
+#section2 {
+    background-color: lightpink;
+}
+
+#section3 {
+    background-color: coral;
+}
+
+#section4 {
+    background-color: aqua;
+}
+
+
+.card{
+    background : url("./my_photo.jpg");
+    align-content:center;
+    position:relative;
+    background-size: cover;
+    background-position: center;
+    width:50%;
+    height: 70%;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+
+#slide{
+    width:100%;
+    height:50%;
+    align-items: center;
+}
+.slides > li{
+    list-style: none;
+}
+.slides > li > img{
+    width: auto;
+    height: 50%;
+    position:absolute;
+    object-fit: cover;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -90%);
+}
+
+#about_me_description{
+    left:50%;
+    top:70%;
+    transform: translateX(-50%);
+    position:absolute;
+}
+
+.portfolio_list{
+    left:50%;
+    top:10%;
+    width:100%;
+    height:10%;
+}
+
+.portfolio_content_container{
+    width:100%;
+    height:90%;
+    position:relative;
+}
+
+.project_content{
+    height:100%;
+    width:100%;
+    position: absolute;
+}
+
+.portfolio_image{
+    left:50%;
+    text-align: center;
+    
+}
+
+.portfolio_image > img{
+    width:80vw;
+    object-fit: contain;
+
+}

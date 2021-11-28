@@ -1,5 +1,5 @@
 var currentIdx = 0;
-var my_photo_arr = []
+var my_photo_arr = [];
 my_photo_arr[0] = "my_photo1";
 my_photo_arr[1] = "my_photo2";
 my_photo_arr[2] = "my_photo3";
@@ -68,30 +68,88 @@ document.getElementById("capstone_design_title").addEventListener('click', funct
 
 //-----------toy project
 
-function instagram_clone_click(){
-    document.getElementById("instagram_clone_content").style.opacity="100%";
-    document.getElementById("2F_fan_content").style.opacity="0%";
-    document.getElementById("instagram_clone_title").style.color="#D0BB57";
-    document.getElementById("2F_fan_title").style.color="white";
-}
+// function instagram_clone_click(){
+//     document.getElementById("instagram_clone_content").style.opacity="100%";
+//     document.getElementById("2F_fan_content").style.opacity="0%";
+//     document.getElementById("instagram_clone_title").style.color="#D0BB57";
+//     document.getElementById("2F_fan_title").style.color="white";
+// }
 
-function f2F_fan_click(){
-    document.getElementById("instagram_clone_content").style.opacity="0%";
-    document.getElementById("2F_fan_content").style.opacity="100%";
-    document.getElementById("instagram_clone_title").style.color="white";
-    document.getElementById("2F_fan_title").style.color="#D0BB57";
-}
+// function f2F_fan_click(){
+//     document.getElementById("instagram_clone_content").style.opacity="0%";
+//     document.getElementById("2F_fan_content").style.opacity="100%";
+//     document.getElementById("instagram_clone_title").style.color="white";
+//     document.getElementById("2F_fan_title").style.color="#D0BB57";
+// }
 
-document.getElementById("2F_fan_content").style.opacity="0%";
+// document.getElementById("2F_fan_content").style.opacity="0%";
 
-document.getElementById("instagram_clone_title").addEventListener('click', function(){
-    instagram_clone_click()
-});
-document.getElementById("2F_fan_title").addEventListener('click', function(){
-    f2F_fan_click()
-});
+// document.getElementById("instagram_clone_title").addEventListener('click', function(){
+//     instagram_clone_click()
+// });
+// document.getElementById("2F_fan_title").addEventListener('click', function(){
+//     f2F_fan_click()
+// });
 
 
 
 
 //------------------------------------
+
+//Main=0, About Me=1, Project=2, Personality=3, Others=4
+// var pageArr = ["main", "about_me", "project", "personality", "others"];
+// var currentPage = 0;
+// var changedPage = 0;
+// var beforePosition = 0;
+// var mainUrl = window.location.href;
+
+// document.addEventListener('scroll', function(){
+//     var afterPosition = document.documentElement.scrollTop;
+
+//     if(Math.abs(afterPosition - beforePosition) > 500){
+//         if(beforePosition < afterPosition){ //아래로 스크롤 상태
+//             if(changedPage == 4){ //최대 스크롤한 상태
+//                 return;
+//             }else{
+//                 changedPage += 1;
+//                 // console.log(pageArr[changedPage]);
+//                 this.location.replace(mainUrl + '#' + pageArr[changedPage]);
+//                 // console.log(document.getElementById("index_container").children[changedPage]);
+//             }
+//         }else if(beforePosition > afterPosition){//위로 스크롤 상태
+//             if(changedPage == 0){
+//                 return;
+//             }else{
+//                 changedPage -= 1;
+//                 console.log(pageArr[changedPage]);
+//             }
+//         }else if(beforePosition == afterPosition){ //아무것도 안한상태
+
+//         }
+//         beforePosition = afterPosition;
+//         currentPage = changedPage;
+//     }
+// });
+
+window.addEventListener("wheel", function(e){
+    e.preventDefault();
+},{passive : false});
+
+var mHtml = ("html");
+var page = 1;
+
+
+mHtml.animate({scrollTop : 0},10);
+
+$(window).on("wheel", function(e) {
+    if(mHtml.is(":animated")) return;
+    if(e.originalEvent.deltaY > 0) {
+        if(page == 4) return;
+        page++;
+    } else if(e.originalEvent.deltaY < 0) {
+        if(page == 1) return;
+        page--;
+    }
+    var posTop =(page-1) * $(window).height();
+    mHtml.animate({scrollTop : posTop});
+})

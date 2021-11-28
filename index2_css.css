@@ -14,6 +14,34 @@ body{
   overflow-x: hidden;
 }
 
+html, body{
+  width:100%;
+  height:100%;
+}
+.section{
+  height:100vh;
+}
+
+/*index---------------------*/
+.index_container{
+  background: #323c41;
+  color:white;
+  display: flex;
+  position:sticky;
+  top:0px;
+  align-content: center;
+  width:100vw;
+  z-index: 9999999;
+  justify-content: space-evenly;
+  visibility: hidden;
+}
+.index_container a{
+  text-decoration: none;
+  color:white;
+}
+/*-------------------------index */
+
+/* card------------------------*/
 .card_container{
   background: #323c41;
   width:100vw;
@@ -79,30 +107,11 @@ body{
   text-align: right;
   color:white;
 }
+/*-------------------card*/
 
 
 
-.index_container{
-  background: #323c41;
-  color:white;
-  display: flex;
-  position:sticky;
-  top:0px;
-  align-content: center;
-  width:100vw;
-  z-index: 9999999;
-  justify-content: space-evenly;
-}
-.index_container a{
-  text-decoration: none;
-  color:white;
-
-}
-
-/* .about_me, .project, .toy_project, .skills, .music, .others{
-  color:white;
-} */
-
+/*about me----------------------*/
 .about_me{
   background: #323c41;
   padding-top: 5em;
@@ -141,12 +150,12 @@ body{
 .about_me_description{
   font-size: 0.75em;
 }
+/*--------------------- about me*/
 
 /* project / porfolio */
 
 .project{
   background: #323c41;
-  height: 100vw;
   color: white;
   text-align: center;
   font-size: 2em;
