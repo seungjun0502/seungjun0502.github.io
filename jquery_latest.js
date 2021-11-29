@@ -11,7 +11,7 @@ mHtml.animate({scrollTop : 0},10);
 $(window).on("wheel", function(e) {
     if(mHtml.is(":animated")) return;
     if(e.originalEvent.deltaY > 0) {
-        if(page == 5) return;
+        if(page == 3) return;
         page++;
     } else if(e.originalEvent.deltaY < 0) {
         if(page == 1) return;
