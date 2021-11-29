@@ -21,6 +21,7 @@ $(window).on("wheel", function(e) {
     mHtml.animate({scrollTop : posTop});
 })
 
+
 var currentIdx = 0;
 var my_photo_arr = [];
 my_photo_arr[0] = "my_photo1";
